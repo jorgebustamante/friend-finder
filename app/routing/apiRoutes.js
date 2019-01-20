@@ -21,8 +21,8 @@ module.exports = function(app){
 
 			// Compute differenes for each question
 			var diff = 0;
-			for (var j = 0; j < userResponses.length; j++) {
-				diff += Math.abs(friends[i].scores[j] - userResponses[j]);
+			for (var j = 0; j < responses.length; j++) {
+				diff += Math.abs(friends[i].scores[j] - responses[j]);
 			}
 			// console.log('diff = ' + diff);
 
@@ -34,6 +34,7 @@ module.exports = function(app){
 
 				totalDifference = diff;
 				matchName = friends[i].name;
+				console.log(matchName);
 				matchImage = friends[i].photo;
 			}
 		}
